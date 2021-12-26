@@ -1,0 +1,56 @@
+-Iterables have __iter__ method and don't have __next__
+-Iterators have __next__ method as well as __iter__
+To check whether iterable or iterator use dir(name) and check those methods in the list
+For example list is iterable but not iterator
+
+From iterable we can make iterator object
+Iterator are all object we can use loop
+But we use loop in iterable as well but in fact it will be using iterator object
+
+Python Function as a First Class Citizen:
+
+a) Functions can be stored in a variable and can be executed with
+   the variable name from anywhere in the program.
+b) A Function can be passed to another function as an argument.
+c) A Function can be returned from a function
+
+
+Criteria for the Closure:
+
+a) There must be a nested function
+b) The nested function must refer to a value defined in the enclosing function
+c) The enclosing function must return the nested function
+
+-Decorators are the function which take our function as an argument and returns other
+function adding some extra functionality to our actual function
+
+-If an object defines any descr.__get__(self,obj,type=None) ,
+descr.__set__(self,obj,value), descr.__delete__(self,obj) then it
+is called Descriptor.
+If an object defines __set__() or __delete__(), it is considered a data descriptor/
+Descriptors that only define __get__() are called non-data descriptor
+
+-Class Methods
+It is a method that is bound to a class rather than object, shared among all objects.
+The @classmethod decorator is a builtin function decorator that is an
+expression that gets evaluated after your function is defined.
+A class method receives the class as implicit first argument. It can modify
+a class variable that will be applicable to all instances.
+It is used to create factory methods.
+-Factory methods
+It is the method which return a class object( like constructor) for different use cases
+-Static methods
+They are bound to a class rather than its object.
+You can use @staticmethod decorator to create a static method.
+Don't require require a class instance creation(object)
+Doesn't take self nor a cls parameter (class parameter) but can have normal arguments or parameter only.
+
+-File Handling
+-Binary and Text Mode
+-Text files: Web standards like html,css, Source code, documents,tabular data like csv,configuration
+-Binary files: Document files like doc,pdf, images,video,audio,archive,database,archive,exe
+In text mode, we get strings when reading from the file
+While binary mode returns bytes objects without any encoding
+read() reads file as string
+readline() read as string with newline but readlines() reads files as list with each list item represents a line
+Similar to write() and writelines()
